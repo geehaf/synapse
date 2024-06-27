@@ -1,0 +1,22 @@
+{
+	"name": "LakeDB",
+	"properties": {
+		"Name": "LakeDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://mycontainer@gkdatalake.dfs.core.windows.net/",
+			"Properties": {
+				"FormatType": "parquet",
+				"LinkedServiceName": "gksynapse-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
